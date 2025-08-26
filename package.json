@@ -1,0 +1,39 @@
+{
+  "name": "mailchimp-typescript-types",
+  "version": "0.1.0",
+  "description": "TypeScript types and interfaces for integrating with the MailChimp API",
+  "main": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./transactional-api": {
+      "types": "./dist/transactional-api/index.d.ts",
+      "default": "./dist/transactional-api/index.d.ts"
+    },
+    "./marketing-api": {
+      "types": "./dist/marketing-api/index.d.ts",
+      "default": "./dist/marketing-api/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "typesVersions": {
+    "*": {
+      "transactional-api": [
+        "dist/transactional-api/index.d.ts"
+      ],
+      "marketing-api": [
+        "dist/marketing-api/index.d.ts"
+      ]
+    }
+  },
+  "author": "Ian Rose",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
